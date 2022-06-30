@@ -1,6 +1,112 @@
 <html>
-    <head>
-        <title>CNA</title>
-        <link rel="icon" href="./images/download.jpg">
-    </head>
+  <head>
+    <title>CNA</title>
+    <link rel="icon" href="./images/download.jpg" />
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      border: 0px;
+      padding: 0px;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-content: flex-start;
+      flex-wrap: wrap;
+    }
+    header {
+      background: #2f1c6a;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      width: 100vw;
+      justify-content: center;
+    }
+    .headerTitle {
+      color: white;
+      font-family: sans-serif;
+      font-size: 15px;
+    }
+    .church {
+      background-image: url("./images/church.jpg");
+      height: 525px;
+      width: 100vw;
+      background-repeat: no-repeat;
+      background-size: 100vw 525px;
+      display:flex;
+      justify-content:flex-start;
+      align-items:flex-start;
+    }
+    .message
+    {
+        font-family:sans-serif;
+        color:#1D1E20;
+        width:500px;
+        padding:50px;
+    }
+    .links
+    {
+        display:flex;
+        justify-content:flex-end;
+    }
+    .navigationbar
+    {
+        display:flex;
+        justify-content:flex-end;
+        width:100vw;
+        padding:20px;
+        
+        transition:top 0.3s;
+    }
+    li 
+    {
+        list-style:none;
+        padding-right:60px;
+        font-family:sans-serif;
+        font-size:17px;
+        color:#222222;
+    }
+    .home
+    {
+        text-decoration:underline;
+        
+    }
+    h6 
+    {
+        font-size:17px;
+        padding-bottom:10px;
+        font-weight:normal;
+    }
+    .blogLink:hover, .theologiesLink:hover
+    {
+        text-decoration:underline;
+    }
+  </style>
+  <body>
+    <header>
+      <h1 class="headerTitle">
+        We are The Confraternity of the New Apologetics.
+      </h1>
+    </header>
+    <nav class="navigationbar">
+        <ul class="links">
+            <li class="home">Home</li>
+            <li class="blogLink">Blog</li>
+            <li class="theologiesLink">Theologies</li>
+        </ul>
+    </nav>
+    <div class="church">
+      <h1 class="message">
+        "...the church of the living God, the pillar and foundation of the
+        truth." (1 Tim. 3:15 RSV) 
+      </h1>
+    </div>
+    <div class="church">
+        <h1 class="message">
+          "...the church of the living God, the pillar and foundation of the
+          truth." (1 Tim. 3:15 RSV) 
+        </h1>
+      </div>
+  </body>
 </html>
