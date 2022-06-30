@@ -49,6 +49,7 @@
     {
         display:flex;
         justify-content:flex-end;
+        
     }
     .navigationbar
     {
@@ -57,7 +58,6 @@
         width:100vw;
         padding:20px;
         
-        transition:top 0.3s;
     }
     li 
     {
@@ -81,6 +81,14 @@
     .blogLink:hover, .theologiesLink:hover
     {
         text-decoration:underline;
+        
+    }
+    img 
+    {
+        height:15px;
+        width:15px;
+        padding-bottom:0.5mm;
+        padding-left:10px;
     }
   </style>
   <body>
@@ -92,8 +100,8 @@
     <nav class="navigationbar">
         <ul class="links">
             <li class="home">Home</li>
-            <li class="blogLink">Blog</li>
-            <li class="theologiesLink">Theologies</li>
+            <li class="blogLink">Blog<img src="./images/sort-down-solid.svg"></li>
+            <li class="theologiesLink">Theologies<img src="./images/sort-down-solid.svg"></li>
         </ul>
     </nav>
     <div class="church">
