@@ -11,261 +11,205 @@
       content="This website is the new website after cnainternational.online."
     />
     <meta property="og:image" content="./images/church.jpg" />
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .organization {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+        padding: 30px;
+        background: #2f1c6a;
+      }
+      .organization em {
+        position: absolute;
+        font-family: sans-serif;
+        font-style: normal;
+        color: white;
+      }
+      .navigationbar {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px;
+      }
+      .navigationbar ul {
+        display: flex;
+        list-style: none;
+        min-width: 450.55px;
+        position: absolute;
+      }
+      .navigationbar ul li {
+        padding-right: 70px;
+        font-family: sans-serif;
+      }
+      .navigationbar ul .active {
+        text-decoration: underline;
+      }
+      .navigationbar ul li img {
+        height: 20px;
+        width: 20px;
+      }
+      .navigationbar ul li .dropdowntheologies {
+        display: none;
+      }
+      .theologies:hover {
+        text-decoration: underline;
+      }
+      .theologies:hover .dropdowntheologies {
+        display: block;
+        cursor: pointer;
+        padding-top: 35px;
+        background: white;
+      }
+      .theologies:hover .dropdowntheologies li {
+        box-shadow: 2px 2px 5px #f5f5f5, -2px -2px 5px #f5f5f5;
+        padding: 10px;
+      }
+      .theologies:hover {
+        transform: scale(1.1);
+      }
+      .navigationbar ul .contact:hover {
+        text-decoration: underline;
+        transform: scale(1.1);
+      }
+      .active:hover {
+        transform: scale(1.1);
+      }
+      .active {
+        padding-top: 1.3mm;
+      }
+      .contact {
+        padding-top: 1.5mm;
+      }
+      .church {
+        background: url("./images/church.jpg");
+        height: 500px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100vw 525px;
+      }
+      .message 
+      {
+        position:absolute;
+        height:50%;
+        width:25%;
+        margin-top:80px;
+        margin-left:150px;
+      }
+      .location 
+      {
+        border:10x solid red;
+        height:500px;
+        width:500px;
+      }
+      .map 
+      {
+        border:10x solid green;
+        color:green;
+      }
+      .contactinformation 
+      {
+        border:10x solid blue;
+        color:blue;
+      }
+      .group 
+      {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        align-content:center;
+        margin:20px;
+        padding:20px;
+      }
+      .card 
+      {
+        margin:20px;
+        padding:20px;
+      }
+      #card 
+      {
+        display:flex;
+        flex-wrap:wrap;
+        width:300px;
+        justify-content:center;
+      }
+      em 
+      {
+        font-family:sans-serif;
+        font-style:normal;
+        text-align:center;
+      }
+      .office, .hours, .contacts
+      {
+        font-size:20px;
+        font-weight:bold;
+      }
+      .address, .discussions, .cpno
+      {
+        font-size:15px;
+        font-weight:bold;
+      }
+      .cpno 
+      {
+        margin-left:50px;
+        margin-right:50px;
+        padding-left:50px;
+        padding-right:50px;
+      }
+      .contact a 
+      {
+        cursor:pointer;
+        text-decoration:none;
+      }
+    </style>
   </head>
-  <style>
-    * {
-      margin: 0px;
-      border: 0px;
-      padding: 0px;
-    }
-    body {
-      display: flex;
-      justify-content: center;
-      align-content: flex-start;
-      flex-wrap: wrap;
-    }
-    header {
-      background: #2f1c6a;
-      height: 70px;
-      display: flex;
-      align-items: center;
-      width: 100vw;
-      justify-content: center;
-    }
-    .headerTitle {
-      color: white;
-      font-family: sans-serif;
-      font-size: 15px;
-    }
-    .church {
-      background-image: url("./images/church.jpg");
-      height: 525px;
-      width: 100vw;
-      background-repeat: no-repeat;
-      background-size: 100vw 525px;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-    }
-    .message {
-      font-family: sans-serif;
-      color: #1d1e20;
-      width: 500px;
-      padding: 50px;
-    }
-    .links {
-      display: flex;
-      justify-content: flex-end;
-      position: absolute;
-      
-    }
-    .navigationbar {
-      display: flex;
-      justify-content: flex-end;
-      width: 100vw;
-      padding: 20px;
-      padding-right: 0px;
-      position: relative;
-      padding-bottom: 40px;
-    }
-    li {
-      list-style: none;
-      padding-right: 50px;
-      font-family: sans-serif;
-      font-size: 17px;
-      color: #222222;
-    }
-    .home {
-      text-decoration: underline;
-    }
-    h6 {
-      font-size: 17px;
-      padding-bottom: 10px;
-      font-weight: normal;
-    }
-    .blogLink:hover,
-    .theologiesLink:hover {
-      text-decoration: underline;
-    }
-    .blogLink a:link
-    {
-      text-decoration:none;
-    }
-    img {
-      height: 15px;
-      width: 15px;
-      padding-bottom: 0.5mm;
-      padding-left: 10px;
-      padding-right: 0px;
-    }
-    .theologiesContent {
-      display: none;
-    }
-    .navigationbar .links .theologiesLink:hover div .theologiesContent {
-      display: block;
-      position: absolute;
-      background: white;
-      margin-top: 0px;
-      margin-left: -22px;
-      background: white;
-    }
-    .navigationbar .links .theologiesLink:hover div .theologiesContent li {
-      padding-top: 20px;
-
-      box-shadow: 3px 3px 7px #F0F0F0, -3px -3px 7px #F0F0F0;
-      padding-bottom: 20px;
-      margin-right: -25px;
-      padding-left: 30px;
-      
-    }
-    .navigationbar
-      .links
-      .theologiesLink:hover
-      div
-      .theologiesContent
-      .firstContent {
-      margin-top: 30px;
-    }
-    .location {
-      height: 100vh;
-      width: 100vw;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      color: #222222;
-    }
-    .address {
-      display: flex;
-      align-items: center;
-      width: 400px;
-      flex-direction: column;
-      font-family: sans-serif;
-      letter-spacing: 3px;
-    }
-    .location .map {
-      margin-left: 50px;
-    }
-    .location .address {
-      margin-right: 50px;
-      padding-right: 70px;
-    }
-    .address h1 {
-      margin-bottom: 50px;
-    }
-    .address h5 {
-      margin-bottom: 50px;
-      text-align: center;
-    }
-    .address h3 h5 {
-      font-size: 12px;
-    }
-    .hoursTitle .contacts {
-      margin-bottom: 5px;
-    }
-    footer {
-      margin-bottom: 10px;
-      padding-top: 10px;
-      display: flex;
-      justify-content: center;
-      width: 100vw;
-      border-top: 1mm solid #2f1c6a;
-    }
-    footer img {
-      height: 30px;
-      width: 30px;
-      margin-right: 20px;
-      transition: all 2s ease-in-out;
-    }
-    footer img:hover {
-      cursor: pointer;
-      transform: scale(2);
-    }
-    .message 
-    {
-      width:15em;
-      font-weight:normal;
-      font-size:1.5vw;
-      margin-left:70px;
-      margin-top:30px;
-    }
-    body
-    {
-      width:100vw;
-    }
-    .home:hover
-    {
-      transform:scale(1.1)
-    }
-    
-    
-    .blogLink:hover
-    {
-      transform:scale(1.1);
-    }
-    
-    .theologiesLink:hover 
-    {
-      transform:scale(1.1);
-    }
-    
-  </style>
   <body>
-    <header>
-      <h1 class="headerTitle">
-        We are the Confraternity of the New Apologetics.
-      </h1>
-    </header>
-    <nav class="navigationbar">
-      <ul class="links">
-        <li class="home">Home<img src="./images/sort-down-solid.svg" /></li>
-        <li class="blogLink"><a href="#address">Contact<img src="./images/sort-down-solid.svg" /></a></li>
-        <li class="theologiesLink">
-          Theologies<img src="./images/sort-down-solid.svg" />
-          <div>
-            <ul class="theologiesContent">
-              <li class="firstContent">Sunday Gospels</li>
-            </ul>
-          </div>
+    <div class="organization">
+      <em>We are the Confraternity of the New Apologetics.</em>
+    </div>
+    <div class="navigationbar" id="navigationbar">
+      <ul>
+        <li class="active"><a href="#navigationbar">Home</a></li>
+        <li class="contact"><a href="#group">Contact</a></li>
+        <li class="theologies">
+          Theologies<img src="./images/sort-down-solid.svg" alt="" />
+          <ul class="dropdowntheologies">
+            <li>Sunday Gospels</li>
+          </ul>
         </li>
       </ul>
-    </nav>
-    <div class="church">
-      <h1 class="message">
-        "...the church of the living God, the pillar and foundation of the
-        truth." (1 Tim. 3:15 RSV)
-      </h1>
     </div>
-    <div class="location">
-      <div class="map">
+    <div class="church">
+    </div>
+    <div class="group" id="group">
+      <span class="card">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3946.1371807948617!2d124.64955331744386!3d8.48604000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x32fff2dd251f8ce5%3A0x7f0b5bbd51ca144a!2sArchdiocesan%20Shrine%20of%20the%20Black%20Nazarene!5e0!3m2!1sen!2sph!4v1656600101422!5m2!1sen!2sph"
-          width="600"
+          width="400"
           height="450"
           style="border: 0"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
-      </div>
-      <div class="address" id="address">
-        <h1>Our office</h1>
-        <h5>
+      </span>
+      <span class="card" id="card">
+        <em class="office">Our office</em>
+        <em class="address">
           Claro M. Recto Avenue, Cagayan de Oro City 9000, District 2, Misamis
           Oriental, Northern Mindanao, Mindanao, Philippines
-        </h5>
-        <h3 class="hoursTitle">Hours</h3>
-        <h5>Online Discussions through Facebook</h5>
-        <h3 class="contacts">Contacts</h3>
-        <h5>09177931179</h5>
-      </div>
+        </em>
+        <em class="hours">Hours</em>
+        <em class="discussions">Online Discussions through Facebook</em>
+        <em class="contacts">Contacts</em>
+        <em class="cpno">09177931179</em>
+      </span>
     </div>
-    <footer>
-      <a href="https://www.facebook.com/groups/421520042319906"
-        ><img src="./images/download.png" alt=""
-      /></a>
-      <a href="https://www.youtube.com/channel/UCGccNSOEnad-3M3gbr6wRAw"
-        ><img src="./images/youtube.png" alt=""
-      /></a>
-    </footer>
   </body>
 </html>
